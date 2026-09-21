@@ -1,0 +1,33 @@
+# Python Program: Multilevel Inheritance
+
+# Parent Class
+class Person:
+    def display_name(self):
+        print("Name:", self.name)
+
+
+# Child Class 1
+class Employee(Person):
+    def display_employee(self):
+        print("Employee ID:", self.emp_id)
+
+
+# Child Class 2
+class Manager(Employee):
+    def __init__(self, name, emp_id, department):
+        self.name = name
+        self.emp_id = emp_id
+        self.department = department
+
+    def display_manager(self):
+        print("Department:", self.department)
+
+
+# Creating an Object
+m = Manager("Vignesh", 101, "IT")
+
+# Displaying Employee Details
+print("Employee Details")
+m.display_name()
+m.display_employee()
+m.display_manager()
